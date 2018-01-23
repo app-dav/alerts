@@ -9,6 +9,7 @@ import { environment } from '../environments/environment';
 import { SubscriptionsComponent } from './subscriptions/subscriptions.component';
 import { ViewerComponent } from './viewer/viewer.component';
 import { SubscriptionService } from './services/subscription.service';
+import { AlertService } from './services/alert.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { SubscriptionService } from './services/subscription.service';
     BrowserModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [SubscriptionService],
+  providers: [SubscriptionService, AlertService],
   bootstrap: [AppComponent, SubscriptionsComponent]
 })
 export class AppModule { }
