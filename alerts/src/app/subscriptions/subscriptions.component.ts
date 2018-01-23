@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from '../models/subscription';
+import { SubscriptionService } from '../services/subscription.service';
 
 @Component({
   selector: 'app-subscriptions',
@@ -9,25 +10,12 @@ import { Subscription } from '../models/subscription';
 })
 export class SubscriptionsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private subService : SubscriptionService) { }
 
   ngOnInit() {
-    this.subscriptions = this.getSubs();
+    this.subService.getSubscriptions().subscribe(s => this.subscriptions = s);
     }
-
- getSubs()
-{
-  const subs = new Array<Subscription>();
-
-    for(let i =0; i < 5; i++){
-      const s = new Subscription();
-      s.name = i.toString();
-      subs.push(s);
-    }
-     
-    return subs;
-}
 
     @Input()
-public subscriptions : Array<Subscription> 
+public subscriptions : Subscription[]
 }
