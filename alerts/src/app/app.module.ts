@@ -10,12 +10,14 @@ import { SubscriptionsComponent } from './subscriptions/subscriptions.component'
 import { ViewerComponent } from './viewer/viewer.component';
 import { SubscriptionService } from './services/subscription.service';
 import { AlertService } from './services/alert.service';
+import { AlertViewComponent } from './alert.view/alert.view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SubscriptionsComponent,
-    ViewerComponent
+    ViewerComponent,
+    AlertViewComponent
   ],
   imports: [
     BrowserModule,

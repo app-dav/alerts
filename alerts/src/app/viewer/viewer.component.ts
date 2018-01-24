@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertService } from '../services/alert.service';
 import { Alert } from '../models/alert';
+import {AlertViewComponent} from "../alert.view/alert.view.component"
 
 @Component({
   selector: 'app-viewer',
