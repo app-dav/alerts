@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {MatCardModule} from "@angular/material";
 
-import {Alert} from  "../models/alert"
+import {Alert} from  "../models/alert";
 
 @Component({
   selector: 'app-alert-view',
@@ -14,4 +15,6 @@ export class AlertViewComponent implements OnInit {
   ngOnInit() {
   }
 
+  @Input()
+  public alert : Alert
 }

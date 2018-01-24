@@ -1,0 +1,11 @@
+.alert-card{
+ padding: 4px;
+ width:60%;
+ background-color: lightgrey;
+}
+
+.alert-card-header{
+    background-color:gray;
+    border: 3px;
+    border-color: black
+}

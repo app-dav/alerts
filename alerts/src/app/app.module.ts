@@ -11,6 +11,7 @@ import { ViewerComponent } from './viewer/viewer.component';
 import { SubscriptionService } from './services/subscription.service';
 import { AlertService } from './services/alert.service';
 import { AlertViewComponent } from './alert.view/alert.view.component';
+import {MatCardModule} from "@angular/material";
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AlertViewComponent } from './alert.view/alert.view.component';
   ],
   imports: [
     BrowserModule,
+    MatCardModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [SubscriptionService, AlertService],

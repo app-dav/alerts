@@ -17,6 +17,7 @@ export class AlertService
             for (let i = 0; i < 5; i++) {
                 const s = new Alert();
                 s.text = i.toString();
+                s.name = i.toString();
                 alerts.push(s);
             }
     
